@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 
+// include names of files found in /public/videos
 const videoFilenames = [
   'IS413 - TheWaterProject - Phase01 - 01 - Intro.mp4',
   'IS413 - TheWaterProject - Phase01 - 02 - Models.mp4',
