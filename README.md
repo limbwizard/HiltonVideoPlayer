@@ -2,7 +2,7 @@
 
 Create a folder in public called 'videos'\
 Put .mp4 files inside\
-add their name to the videoFilenames in App.tsx\
+add their name to the videoFilenames in App.tsx
 
 ## Available Scripts
 
