@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# Getting Started with Hilton Video Player
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Create a folder in public called 'videos'
+Put .mp4 files inside
+add their name to the videoFilenames in App.tsx
 
 ## Available Scripts
 
