@@ -1,0 +1,196 @@
+:root {
+  --bg-dark: #0a2239; /* Cooler dark blue */
+  --accent: #53bf9d; /* Soothing green */
+  --highlight: #f9a620; /* Warm sunset orange */
+  --text-main: #ffffff; /* Crisp white */
+  --text-secondary: #cad2c5; /* Soft gray */
+  --title-bg: #1d4257; /* Deep, dark blue */
+  --footer-bg: #1d4257; /* Matches title background */
+  --button-bg: #53bf9d; /* Button background */
+  --button-hover-bg: #f9a620; /* Button hover background */
+  --button-text: #ffffff; /* Button text */
+  --border-radius: 8px;
+  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+.App-title,
+.App-footer {
+  padding: 0.5rem;
+  background-color: var(--title-bg);
+  color: var(--text-main);
+  font-weight: bold;
+}
+
+.App-title {
+  font-size: 2.5rem;
+  font-family: 'Merriweather', serif;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.App-footer {
+  background-color: var(--footer-bg);
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.App-main {
+  display: flex;
+  overflow: auto;
+  flex-grow: 1;
+  padding: 1rem;
+  align-items: start;
+}
+
+.video-list {
+  overflow-y: auto;
+  padding: 1rem;
+  background-color: var(--title-bg);
+  max-height: calc(100vh - 10rem);
+  width: 20%;
+  border: 2px solid var(--accent);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.video-list p:hover {
+  background-color: var(--accent);
+  color: var(--bg-dark);
+}
+
+.video-player-container {
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+video {
+  max-width: 100%;
+  max-height: calc(100vh - 10rem);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  margin: 0.5rem;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+  border-radius: var(--border-radius);
+}
+
+.button:hover {
+  background-color: var(--button-hover-bg);
+  transform: scale(1.05);
+}
+
+/* Remove absolute positioning from buttons */
+.button-prev,
+.button-next {
+  position: relative;
+  transform: none;
+}
+
+@media (max-width: 768px) {
+  .App-container {
+    flex-direction: column;
+  }
+
+  .video-list,
+  video {
+    width: 100%;
+    max-height: unset;
+    margin-bottom: 1rem;
+  }
+
+  .button-prev,
+  .button-next {
+    left: auto;
+    right: auto;
+    bottom: -3rem;
+  }
+
+  .button-prev {
+    margin-right: auto;
+    margin-left: 5%;
+  }
+
+  .button-next {
+    margin-left: auto;
+    margin-right: 5%;
+  }
+
+  .App-main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .App-title {
+    font-size: 2rem;
+    padding: 1rem;
+    margin-bottom: 0;
+  }
+
+  .App-footer {
+    font-size: 0.8rem;
+    padding: 0.75rem;
+  }
+
+  video {
+    max-width: 90%;
+    max-height: 50vh;
+  }
+
+  .button {
+    padding: 0.5rem 1rem;
+    margin: 0.25rem;
+    font-size: 0.9rem;
+  }
+
+  /* Adjust buttons to sit below the video rather than on top */
+  .button,
+  .button-prev,
+  .button-next {
+    position: static;
+    margin-top: 1rem;
+  }
+
+  /* Align buttons horizontally below the video */
+  .video-player-container > div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}
+.current-video {
+  background-color: var(--highlight); /* Or any color that stands out */
+  color: var(--text-main);
+  font-weight: bold; /* Optional */
+}
