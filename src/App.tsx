@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
 
-// include names of files found in /public/videos
 const videoFilenames = [
   'IS413 - TheWaterProject - Phase01 - 01 - Intro.mp4',
   'IS413 - TheWaterProject - Phase01 - 02 - Models.mp4',
@@ -42,6 +41,21 @@ const videoFilenames = [
   'IS413 - TheWaterProject - Phase04 - 09 - Session.mp4',
   'IS413 - TheWaterProject - Phase04 - 10 - ReturnUrl.mp4',
   'IS413 - TheWaterProject - Phase04 - 11 - Recap.mp4',
+  'IS413 - TheWaterProject - Phase05 - 01 - AzureDeployment.mp4',
+  'IS413 - TheWaterProject - Phase05 - 02 - AzureSQLDatabaseSetup - Part01.mp4',
+  'IS413 - TheWaterProject - Phase05 - 03 - AzureSQLDatabaseSetup - Part02.mp4',
+  'IS413 - TheWaterProject - Phase05 - 04 - ConnectAzureDatabase.mp4',
+  'IS413 - TheWaterProject - Phase05 - 05 - Migrations.mp4',
+  'IS413 - TheWaterProject - Phase05 - 06 - MigratingData.mp4',
+  'IS413 - TheWaterProject - Phase05 - 07 - Republishing.mp4',
+  'IS413 - TheWaterProject - Phase06 - 01 - Intro.mp4',
+  'IS413 - TheWaterProject - Phase06 - 02 - Session.mp4',
+  'IS413 - TheWaterProject - Phase06 - 03 - Session.mp4',
+  'IS413 - TheWaterProject - Phase06 - 04 - Updates.mp4',
+  'IS413 - TheWaterProject - Phase06 - 05 - RemoveCartItems.mp4',
+  'IS413 - TheWaterProject - Phase06 - 06 - CartSummary.mp4',
+  'IS413 - TheWaterProject - Phase06 - 07 - CartViewComponent.mp4',
+  'IS413 - TheWaterProject - Phase06 - 08 - Conclusion.mp4',
 ];
 
 function App() {
